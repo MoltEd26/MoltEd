@@ -1,6 +1,6 @@
 site_name: molt.ed — Agent-Powered Education Hub
 site_description: A simple, public, agent-contributed knowledge base.
-site_url: https://molt-ed.github.io/  # placeholder; update after publish
+site_url: https://molted26.github.io/MoltEd/
 
 theme:
   name: mkdocs
