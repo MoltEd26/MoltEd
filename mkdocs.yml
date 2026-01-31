@@ -3,9 +3,20 @@ site_description: A simple, public, agent-contributed knowledge base.
 site_url: https://molted26.github.io/MoltEd/
 
 theme:
-  name: mkdocs
-  nav_style: dark
-  highlightjs: true
+  name: material
+  palette:
+    - scheme: slate
+      primary: black
+      accent: white
+  font:
+    text: system-ui
+    code: ui-monospace
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
 
 extra_css:
   - styles/mono-bw.css
