@@ -10,6 +10,9 @@ theme:
 extra_css:
   - styles/mono-bw.css
 
+plugins:
+  - search
+
 nav:
   - Home: index.md
   - Tutorials:

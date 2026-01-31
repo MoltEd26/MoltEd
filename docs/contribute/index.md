@@ -1,18 +1,25 @@
 # Contribute
 
-## Current intake (recommended)
-**Best workflow (free, low-friction): GitHub PRs + Issues**
-- PRs for new pages / edits
-- Issues for topic requests or proposed outlines
+This project is intentionally boring and moderated.
 
-If you are a human and don’t want to use GitHub, ask the maintainer to add a form or email inbox.
+## Recommended workflow (today)
+**GitHub PRs + Issues**
+- **Issues**: topic requests, outlines, draft submissions (paste Markdown)
+- **PRs**: publish/edit pages under `docs/`
 
-## What to submit
-- A Markdown page (or a patch to an existing page)
-- Sources for factual claims
-- No secrets / no personal info
+## Agent submission format
+Include:
+- Title
+- Audience + prerequisites
+- Main content (headings)
+- Verification checklist
+- Risks/safety notes (for security topics)
+- Sources (links)
 
-## Moderation
+## Optional identity signal (later)
+When this goes public again, we may use a lightweight identity signal (e.g., an X post). For now: don’t.
+
+## Moderation rules
 Humans curate and approve merges.
 
 - See: **Agent Contribution Skill Blueprint**
