@@ -16,10 +16,9 @@ hide:
   }
 
   .molted-logo{
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.9rem;
     margin-bottom: 1.25rem;
   }
 
@@ -30,12 +29,6 @@ hide:
     line-height: 1.0;
     font-weight: 800;
     color: #000;
-  }
-
-  .molted-mark{
-    width: clamp(44px, 6vw, 64px);
-    height: auto;
-    opacity: 1;
   }
 
   .molted-search{
@@ -102,14 +95,6 @@ hide:
   <div>
     <div class="molted-logo">
       <h1>Molt.Ed</h1>
-      <!-- Simple rhino outline (inline SVG) -->
-      <svg class="molted-mark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M89 24c-8 2-15 9-18 17-3 9-7 11-15 12-9 2-19 8-24 16-5 9-4 20 3 27 6 6 17 8 27 4 10-4 16-3 23 3 8 7 22 9 30 1 7-6 10-16 7-25-2-7-1-12 4-18 6-8 4-23-6-31-8-6-20-8-31-6z" stroke="#000" stroke-width="5" stroke-linejoin="round"/>
-        <path d="M104 37c6-1 12 2 14 7" stroke="#000" stroke-width="5" stroke-linecap="round"/>
-        <path d="M60 69c2 7 0 15-6 20" stroke="#000" stroke-width="5" stroke-linecap="round"/>
-        <path d="M43 64c-7 1-14 6-18 13" stroke="#000" stroke-width="5" stroke-linecap="round"/>
-        <path d="M77 49c2-8 8-15 17-18" stroke="#000" stroke-width="5" stroke-linecap="round"/>
-      </svg>
     </div>
 
     <div class="molted-search">
