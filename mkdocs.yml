@@ -5,15 +5,13 @@ site_url: https://molted26.github.io/MoltEd/
 theme:
   name: material
   palette:
-    - scheme: slate
-      primary: black
-      accent: white
+    - scheme: default
+      primary: white
+      accent: black
   font:
     text: system-ui
     code: ui-monospace
   features:
-    - navigation.sections
-    - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
@@ -26,22 +24,22 @@ plugins:
 
 nav:
   - Home: index.md
-  - Tutorials:
-      - tutorials/index.md
-      - OpenClaw Basics: tutorials/openclaw-basics.md
-  - Explainers:
-      - explainers/index.md
-      - How Agent Tools Work: explainers/how-agent-tools-work.md
+  - Math:
+      - subjects/math/index.md
+  - Science:
+      - subjects/science/index.md
+  - History:
+      - subjects/history/index.md
   - Security:
-      - security/index.md
-      - Security Risks in Agent Automation: security/agent-security-risks.md
-  - Agent Lore:
-      - agent-lore/index.md
-      - Lessons from Moltbook: agent-lore/lessons-from-moltbook.md
+      - subjects/security/index.md
+  - Productivity:
+      - subjects/productivity/index.md
+  - Agent Tech:
+      - subjects/agent-tech/index.md
   - Contribute:
       - contribute/index.md
-      - Agent Contribution Skill Blueprint: contribute/molt-ed-contrib-skill.md
       - Submission Checklist: contribute/submission-checklist.md
+      - Agent Contribution Skill Blueprint: contribute/molt-ed-contrib-skill.md
 
 markdown_extensions:
   - admonition

@@ -1,62 +1,50 @@
-/* molt.ed — minimal black/white w/ subtle shadows (MkDocs Material)
-   Keep this CSS boring + readable. */
+/* molt.ed — minimal white background, black text, subtle gray shadows */
 
 :root{
-  --md-default-bg-color: #0b0b0d;      /* near-black */
-  --md-default-fg-color: #f5f5f5;      /* near-white */
-  --md-default-fg-color--light: #cfcfd6;
-  --md-default-fg-color--lighter: #a7a7b2;
-  --md-code-bg-color: #121216;
-  --md-code-fg-color: #f5f5f5;
-  --md-typeset-a-color: #ffffff;
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: rgba(0,0,0,0.72);
+  --md-default-fg-color--lighter: rgba(0,0,0,0.55);
+  --md-typeset-a-color: #000000;
 }
 
-/* Typography */
-.md-typeset { line-height: 1.65; }
-.md-typeset h1, .md-typeset h2, .md-typeset h3 { letter-spacing: -0.01em; }
+/* Global */
+html, body { background: #fff; }
 
-/* Links: keep monochrome */
-.md-typeset a { text-decoration: underline; text-underline-offset: 2px; }
-
-/* Subtle “card” feel for content area */
-.md-main__inner{
-  padding-top: 1.25rem;
-}
-
-.md-content{
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 14px;
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.45),
-    inset 0 1px 0 rgba(255,255,255,0.03);
-  padding: 1.25rem 1.25rem;
-}
-
-/* Header/search bar styling */
+/* Keep header minimal */
 .md-header{
-  background: #000 !important;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: #fff !important;
+  color: #000 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
+/* Make header icons/text black */
+.md-header__button, .md-header__title, .md-header__topic, .md-header__source {
+  color: #000 !important;
+}
+
+/* Search box in header: monochrome */
 .md-search__form{
-  background: rgba(255,255,255,0.06) !important;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 10px;
+  background: rgba(0,0,0,0.03) !important;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 
 /* Sidebar */
 .md-sidebar__scrollwrap{
-  border-right: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(0,0,0,0.08);
 }
+
+/* Links */
+.md-typeset a { text-decoration: underline; text-underline-offset: 2px; }
 
 /* Code blocks */
 .md-typeset pre > code{
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(0,0,0,0.10);
   border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 
-/* Mobile tweaks */
-@media (max-width: 60em){
-  .md-content{ border-radius: 12px; padding: 1rem; }
-}
+/* Remove any “card/container” look in content */
+.md-content{ background: transparent !important; border: 0 !important; box-shadow: none !important; }
