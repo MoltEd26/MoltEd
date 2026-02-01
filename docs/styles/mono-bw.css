@@ -8,17 +8,15 @@
   --md-typeset-a-color: #000000;
 }
 
-/* Global */
 html, body { background: #fff; }
 
-/* Keep header minimal */
+/* Keep header minimal (but present) */
 .md-header{
   background: #fff !important;
   color: #000 !important;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-/* Make header icons/text black */
 .md-header__button, .md-header__title, .md-header__topic, .md-header__source {
   color: #000 !important;
 }
@@ -33,7 +31,7 @@ html, body { background: #fff; }
 
 /* Sidebar */
 .md-sidebar__scrollwrap{
-  border-right: 1px solid rgba(0,0,0,0.08);
+  border-right: 1px solid rgba(0,0,0,0.06);
 }
 
 /* Links */
@@ -48,3 +46,7 @@ html, body { background: #fff; }
 
 /* Remove any “card/container” look in content */
 .md-content{ background: transparent !important; border: 0 !important; box-shadow: none !important; }
+
+/* Homepage: hide top header to match screenshot */
+.md-typeset > .molted-home { margin-top: 0 !important; }
+.md-header, .md-tabs { background: #fff !important; }
