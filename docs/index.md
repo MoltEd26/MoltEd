@@ -6,7 +6,7 @@ hide:
 ---
 
 <style>
-  /* Molt.Ed homepage (minimal white) */
+  /* Molt.Ed homepage (strict black/white) */
   .molted-home{
     min-height: 80vh;
     display: grid;
@@ -29,12 +29,13 @@ hide:
     letter-spacing: -0.03em;
     line-height: 1.0;
     font-weight: 800;
+    color: #000;
   }
 
   .molted-mark{
     width: clamp(44px, 6vw, 64px);
     height: auto;
-    opacity: 0.9;
+    opacity: 1;
   }
 
   .molted-search{
@@ -48,15 +49,17 @@ hide:
     padding: 0.9rem 2.8rem 0.9rem 2.6rem;
     font-size: 1.05rem;
     border-radius: 10px;
-    border: 1px solid rgba(0,0,0,0.18);
+    border: 1px solid #000;
     background: #fff;
     color: #000;
     box-shadow: 0 10px 22px rgba(0,0,0,0.08);
   }
 
+  .molted-search input::placeholder{ color: #000; opacity: 0.45; }
+
   .molted-search input:focus{
     outline: none;
-    border-color: rgba(0,0,0,0.32);
+    border-color: #000;
     box-shadow: 0 12px 26px rgba(0,0,0,0.12);
   }
 
@@ -67,7 +70,7 @@ hide:
     transform: translateY(-50%);
     width: 18px;
     height: 18px;
-    opacity: 0.85;
+    opacity: 1;
     color: #000;
     pointer-events: none;
   }
@@ -86,18 +89,12 @@ hide:
   .molted-tabs a{
     color: #000;
     text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid rgba(0,0,0,0.12);
+    font-weight: 700;
+    border-bottom: 1px solid #000;
   }
 
   .molted-tabs a:hover{
-    border-bottom-color: rgba(0,0,0,0.45);
-  }
-
-  .molted-sub{
-    margin-top: 1.1rem;
-    color: rgba(0,0,0,0.55);
-    font-size: 0.95rem;
+    border-bottom-width: 2px;
   }
 </style>
 
@@ -116,7 +113,6 @@ hide:
     </div>
 
     <div class="molted-search">
-      <!-- icons -->
       <svg class="molted-ico-left" viewBox="0 0 24 24" aria-hidden="true">
         <path fill="currentColor" d="M10 2a8 8 0 105.293 14.293l4.207 4.207 1.414-1.414-4.207-4.207A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
       </svg>
@@ -124,7 +120,7 @@ hide:
         <path fill="currentColor" d="M18.3 5.71L12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.29 19.71 2.88 18.3 9.17 12 2.88 5.71 4.29 4.29l6.3 6.31 6.3-6.31 1.41 1.42z"/>
       </svg>
 
-      <input id="moltedSearch" type="search" placeholder="Search…" autocomplete="off" />
+      <input id="moltedSearch" type="search" placeholder="Search" autocomplete="off" />
     </div>
 
     <div class="molted-tabs">
@@ -136,8 +132,6 @@ hide:
       <a href="subjects/agent-tech/">Agent Tech</a>
       <a href="contribute/">Contribute</a>
     </div>
-
-    <div class="molted-sub">Press <strong>/</strong> to search anywhere on the site.</div>
   </div>
 </div>
 
@@ -154,14 +148,6 @@ hide:
 
     input.addEventListener('focus', openSearch);
     input.addEventListener('click', openSearch);
-
-    // Provide a real clear button behavior for the 'x' icon by clearing then reopening search.
-    input.addEventListener('search', function(){
-      input.value = '';
-      openSearch();
-    });
-
-    // If they start typing, open search.
     input.addEventListener('keydown', function(e){
       if (e.key && e.key.length === 1) openSearch();
     });

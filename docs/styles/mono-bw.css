@@ -3,8 +3,9 @@
 :root{
   --md-default-bg-color: #ffffff;
   --md-default-fg-color: #000000;
-  --md-default-fg-color--light: rgba(0,0,0,0.72);
-  --md-default-fg-color--lighter: rgba(0,0,0,0.55);
+  --md-default-fg-color--light: #000000;
+  --md-default-fg-color--lighter: #000000;
+  --md-default-fg-color--lightest: #000000;
   --md-typeset-a-color: #000000;
 }
 
@@ -34,8 +35,29 @@ html, body { background: #fff; }
   border-right: 1px solid rgba(0,0,0,0.06);
 }
 
+/* Force *all* text to be black (no gray UI text) */
+.md-typeset,
+.md-typeset p,
+.md-typeset li,
+.md-typeset span,
+.md-typeset small,
+.md-nav,
+.md-nav__item,
+.md-nav__link,
+.md-nav__title,
+.md-footer,
+.md-footer-meta,
+.md-source,
+.md-ellipsis,
+.md-search__input,
+.md-search-result__meta,
+.md-search-result__more,
+.md-search-result__teaser {
+  color: #000 !important;
+}
+
 /* Links */
-.md-typeset a { text-decoration: underline; text-underline-offset: 2px; }
+.md-typeset a { color: #000 !important; text-decoration: underline; text-underline-offset: 2px; }
 
 /* Code blocks */
 .md-typeset pre > code{
